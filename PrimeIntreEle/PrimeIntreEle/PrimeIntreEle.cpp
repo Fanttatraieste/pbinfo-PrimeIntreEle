@@ -14,7 +14,7 @@ int main()
 
 	for (int d = 2; d * d < a && ok == 1; d++)
 	{
-		if ((a % d == 0 && b % 2 == 0) || (b % (a / d) == 0))    // daca gasim un divizor al lui a, care e si al lui b
+		if ((a % d == 0 && b % a == 0) || ( a % d == 0 && b % (a / d) == 0))    // daca gasim un divizor al lui a, care e si al lui b
 			ok = 0;    // nu sunt prime intre ele 
 	}
 	if (b % a == 0)
@@ -30,7 +30,7 @@ int main()
 }
 
 /*
-*	Problema e doar de 90 de puncte pe pbinfo 
-*	Am uitat o conditie tampita de existenta
-*	O sa revin asupra ei
+*	Am corectat
+*	Nu era conditia de existenta tampita
+*	Eu eram :)
 */
